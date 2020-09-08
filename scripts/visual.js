@@ -66,3 +66,12 @@ function drawPackages()
     }
 }
 
+function reDraw()
+{
+    
+    ctx.beginPath();
+    ctx.clearRect(0, 0, ctx.width, ctx.height);
+    drawRoads();
+    drawLocations();
+    drawPackages();
+}

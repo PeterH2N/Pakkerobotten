@@ -1,0 +1,5 @@
+Version a 08-09-2020
+
+Kan initialisere et givent antal pakker med tilfældige lokationer, og tegne dem  på deres lokationer.
+
+Næste trin er at lave en algoritme til robotten, så den kan aflevere pakker.

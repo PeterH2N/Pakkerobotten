@@ -1,0 +1,23 @@
+function getPackages()
+{
+	numPackages = random int 3-30
+
+	array packages
+	
+	for (k = 0; k < numPackages; k = k+1)
+	{
+		startLocation = random location
+		
+		endLocation = startLocation
+		
+		while (endLocation is startLocation)
+		{
+			endLocation = random location
+		}
+
+		add package to array
+	
+	}
+	
+	return packages
+}

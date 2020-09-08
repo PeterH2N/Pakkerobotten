@@ -46,7 +46,20 @@ function getPackages()
             {
                 endLocationIndex = Math.round(Math.random() * (locations.length - 1)) 
             }
-            packages.push({current: locations[startLocationIndex], end: locations[endLocationIndex]});
+            packages.push(
+            {
+                current: locations[startLocationIndex], 
+                end: locations[endLocationIndex], 
+                arrived()
+                {
+                    if (current === end)
+                    {
+                        return true;
+                    }
+                    else
+                        return false;
+                }
+            });
         }
 
         return packages;
@@ -66,14 +79,3 @@ function initPackages()
     console.log(coords);
 }
 
-// State object template for the town
-const state = 
-{
-    init(robot_loc, packages) 
-    {
-        this.robot_loc = robot_loc;
-        this.packages = packages;
-    },
-
-    move(to) {}
-};
